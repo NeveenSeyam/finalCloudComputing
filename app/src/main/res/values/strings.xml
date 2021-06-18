@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">CMFinalProject</string>
+    <string name="notification_channel_id">default</string>
+
+    //spanner
+    <string-array name="colors">
+        <item>red</item>
+        <item>blue</item>
+        <item>yellow</item>
+        <item>black</item>
+        <item>pink</item>
+        <item>green</item>
+
+    </string-array>
+
+    //fontSize
+    <string-array name="numbers">
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+
+    </string-array>
+
+    //card
+    <string-array name="cardcol">
+        <item>white</item>
+        <item>grey</item>
+        <item>blue</item>
+        <item>red</item>
+        <item>green</item>
+        <item>pink</item>
+        <item>yellow</item>
+
+
+    </string-array>
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "145526883231",
+    "project_id": "cloud-computing-9f9b4",
+    "storage_bucket": "cloud-computing-9f9b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145526883231:android:ceb05d46e005ebc04073aa",
+        "android_client_info": {
+          "package_name": "com.exp.cmfinalproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "145526883231-0pc5ptvk3s2bane9ltplc15sachpafuj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVTUdDPRhhO5cPSQ65CnYXMmu-Sp0SoXo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "145526883231-0pc5ptvk3s2bane9ltplc15sachpafuj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

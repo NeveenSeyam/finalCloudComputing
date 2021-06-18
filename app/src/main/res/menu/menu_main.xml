@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.haerul.finalproject.MainActivity">
+
+    <item
+        android:id="@+id/action_profile"
+        android:orderInCategory="100"
+        android:title="Search"
+        android:icon="@drawable/ic_baseline_person_24"
+        app:showAsAction="collapseActionView|always"
+        android:theme="@android:style/Theme.Holo.Light.DarkActionBar"/>
+
+    <item
+        android:id="@+id/action_about_app"
+        android:orderInCategory="100"
+        android:title="About App"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_setting_app"
+        android:orderInCategory="100"
+        android:title="setting App"
+        app:showAsAction="never"
+        />
+
+</menu>
