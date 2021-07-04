@@ -13,7 +13,6 @@ import android.widget.TextView;
 public class AboutAppActivity extends AppCompatActivity {
     Controllerdb controllerdb =new Controllerdb(this);
     SQLiteDatabase database;
-
     TextView textView;
     android.widget.VideoView VideoView ;
 

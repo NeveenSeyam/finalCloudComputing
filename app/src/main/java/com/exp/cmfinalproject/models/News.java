@@ -1,5 +1,7 @@
 package com.exp.cmfinalproject.models;
 
+import android.util.Log;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -36,6 +38,8 @@ public class News {
     }
 
     public List<Article> getArticle() {
+        Log.d("nev11" , ""+article.size());
+
         return article;
     }
 

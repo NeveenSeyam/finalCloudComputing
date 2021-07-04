@@ -15,6 +15,7 @@ import static com.exp.cmfinalproject.redesign.fontColor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -25,6 +26,8 @@ public class splash extends AppCompatActivity {
     final String PREFS_NAME = "MyPrefsFile";
     Controllerdb controllerdb ;
     SQLiteDatabase database;
+    FirebaseAuth fauth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +35,7 @@ public class splash extends AppCompatActivity {
         controllerdb =new Controllerdb(this);
         database=controllerdb.getWritableDatabase();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
+        fauth = FirebaseAuth.getInstance();
 
         db = FirebaseFirestore.getInstance();
 
@@ -48,7 +52,6 @@ public class splash extends AppCompatActivity {
         }else{
             database.execSQL("INSERT INTO Details(Text)" +
                     "VALUES('"+"The city of Jerusalem is one of the important civilized and holy cities. Its first landmarks were founded on the hills of appearance that overlooks Silwan in the southeastern side of Al-Aqsa Mosque. Its geographical extension at the present time starts from the southern side of the Hebron Mountains, the northern side of the Nablus Mountains, and reaches the eastern side. belonging to the Mediterranean Sea, and its height above sea level is approximately 775 m"+"')" );
-
 
         }
         db.collection("redesign").addSnapshotListener(new EventListener<QuerySnapshot>() {
@@ -116,15 +119,20 @@ public class splash extends AppCompatActivity {
                     @Override
 
                     public void run() {
+                        if (fauth.getCurrentUser() != null) {
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            finish();
+                        } else {
 
-                        Intent i = new Intent(splash.this, welcome.class);
+                            Intent i = new Intent(splash.this, welcome.class);
 
-                        startActivity(i);
+                            startActivity(i);
 
-                        // close this activity
+                            // close this activity
 
-                        finish();
+                            finish();
 
+                        }
                     }
 
                 }, 4000);

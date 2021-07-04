@@ -16,6 +16,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -73,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements  SwipeRefreshLayo
             recyclerView.setItemAnimator(new DefaultItemAnimator());
             recyclerView.setNestedScrollingEnabled(false);
 
-            onLoadingSwipeRefresh("Jerusalem");
+            onLoadingSwipeRefresh("القدس");
 
             errorLayout = findViewById(R.id.errorLayout);
             errorImage = findViewById(R.id.errorImage);
@@ -128,11 +129,13 @@ public class MainActivity extends AppCompatActivity implements  SwipeRefreshLayo
                 @Override
                 public void onResponse(Call<News> call, Response<News> response) {
                     if (response.isSuccessful() && response.body().getArticle() != null){
+                        Log.d("nev1" , ""+articles.size());
 
                         if (!articles.isEmpty()){
                             articles.clear();
                         }
-
+                        Log.d("nev1" , ""+articles.size());
+                        // هنا عرض الداتا بالرسايكل
                         articles = response.body().getArticle();
                         adapter = new Adapter(articles, MainActivity.this);
                         recyclerView.setAdapter(adapter);

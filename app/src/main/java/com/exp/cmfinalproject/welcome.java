@@ -21,10 +21,10 @@ public class welcome extends AppCompatActivity {
 
         SignIn1 =(Button) findViewById(R.id.signIn1);
         SignUp2 = (Button)findViewById(R.id.signUp2);
-        if(fauth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-            finish();
-        }
+//        if(fauth.getCurrentUser() != null){
+//            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+//            finish();
+//        }
 
 
         SignIn1.setOnClickListener(new View.OnClickListener() {
